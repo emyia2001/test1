@@ -1,0 +1,92 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: '书籍推荐',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero>
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight"> 光影的梦境</span><br>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold"></span> 
+        而电影，则是另一扇通往不同世界的大门。从经典老片到新锐佳作，【墨影书缘】收录了我对电影的独特见解和推荐。我热爱那些能够触动心灵、引发思考的作品，它们用光影编织的梦境，让我在现实之外找到了共鸣与慰藉。通过我的视角，您或许能发现那些隐藏在银幕背后的故事与情感，体验到电影艺术的无限魅力。
+      </span>
+    </Fragment>
+  </Hero>
+
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: '剧情简介',
+        description: '威尔顿预备学院以其沉稳凝重的教学风格和较高的升学率闻名，作为其毕业班的学生，理想就是升入名校。新学期文学老师约翰·基汀（罗宾·威廉姆斯 饰）的到来如同一阵春风，一反传统名校的严肃刻板。基汀带学生们在校史楼内聆听死亡的声音，反思生的意义 ；让男生们在绿茵场上宣读自己的理想；鼓励学生站在课桌上，用新的视角俯瞰世界。老师自由发散式的哲学思维让学生内心产生强烈的共鸣，他们渐渐学会自己思考与求索，勇敢的追问人生的路途，甚至违反门禁，成立死亡诗社，在山洞里击节而歌！',
+      },
+    ]}
+    image={{
+      src: '/4.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">死亡诗社 Dead Poets Society (1989) </h3>
+      <p>导演: 彼得·威尔</p>
+      <p>编剧: 汤姆·舒尔曼</p>
+      <p>主演: 罗宾·威廉姆斯 / 罗伯特·肖恩·莱纳德 / 伊桑·霍克 / 乔西·查尔斯 / 盖尔·汉森 / 更多...</p>
+      <p>类型: 剧情</p>
+      <p>制片国家/地区: 美国</p>
+      <p>语言: 英语 / 拉丁语</p>
+      <p>上映日期: 1989-06-02(多伦多首映) / 1989-06-09(美国)</p>
+      <p>片长: 128 分钟</p>
+      <p>又名: 暴雨骄阳(港) / 春风化雨(台) / 壮志骄阳</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: '剧情简介',
+        description: '1949年的法国乡村，音乐家克莱门特（热拉尔·朱尼奥 饰）到了一间外号叫“塘低”的男子寄宿学校当助理教师。学校里的学生大部分都是难缠的问题儿童，体罚在这里司空见惯，学校的校长（弗朗索瓦·贝莱昂 饰）只顾自己的前途，残暴高压。性格沉静的克莱门特尝试用自己的方法改善这种状况，他重新创作音乐作品，组织合唱团，决定用音乐的方法来打开学生们封闭的心灵。然而，事情并不顺利，克莱门特发现学生皮埃尔·莫安琦（让-巴蒂斯特·莫尼耶 饰）拥有非同一般的音乐天赋，但是单亲家庭长大的他，性格异常敏感孤僻，怎样释放皮埃尔的音乐才能，让克莱门特头痛不已；同时，他与皮埃尔母亲的感情也渐渐微妙起来。',
+      },
+    ]}
+    image={{
+      src: '/5.png',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">放牛班的春天 Les choristes (2004)</h3>
+      <p>导演: 克里斯托夫·巴哈蒂</p>
+      <p>编剧: 乔治·沙普罗 / 勒·惠勒 / 诺埃-诺尔 / 克里斯托夫·巴哈蒂 / 菲利普·洛佩斯-屈瓦尔</p>
+      <p>主演: 让-巴蒂斯特·莫尼耶 / 热拉尔·朱尼奥 / 弗朗索瓦·贝莱昂 / 凯德·麦拉德 / 让-保罗·博奈雷 / 更多...</p>
+      <p>类型: 剧情 / 音乐</p>
+      <p>制片国家/地区: 法国 / 瑞士 / 德国</p>
+      <p>语言: 法语</p>
+      <p>上映日期: 2004-10-16(中国大陆) / 2022-12-02(中国大陆重映) / 2004-03-17(法国)</p>
+      <p>片长: 97分钟</p>
+      <p>又名: 歌声伴我心(港) / 唱诗班男孩 / The Chorus</p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+
+  </Content>
+
+</Layout>
